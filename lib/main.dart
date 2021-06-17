@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const stream = const EventChannel('com.yourcompany.eventchannelsample/stream');
+  static const stream = const EventChannel('com.korealaundry.eventchannelsample/stream');
 
   int _timer = 0;
   StreamSubscription _timerSubscription;

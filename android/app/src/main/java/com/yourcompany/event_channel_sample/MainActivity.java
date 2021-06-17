@@ -17,7 +17,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends FlutterActivity {
     public static final String TAG = "eventchannelsample";
-    public static final String STREAM = "com.yourcompany.eventchannelsample/stream";
+    public static final String STREAM = "com.korealaundry.eventchannelsample/stream";
 
     private Disposable timerSubscription;
 
