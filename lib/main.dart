@@ -29,7 +29,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static const stream = const EventChannel('com.korealaundry.eventchannelsample/stream');
-  static const platform = const MethodChannel('com.korealaundry.eventchannelsample/myMethodChannel');
+  static const platform = const MethodChannel('com.korealaundry.eventchannelsample/channel');
 
   int _timer = 0;
   StreamSubscription _timerSubscription;
