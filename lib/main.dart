@@ -29,6 +29,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static const stream = const EventChannel('com.korealaundry.eventchannelsample/stream');
+  static const platform = const MethodChannel('com.korealaundry.eventchannelsample/channel');
 
   int _timer = 0;
   StreamSubscription _timerSubscription;
@@ -49,6 +50,15 @@ class _MyHomePageState extends State<MyHomePage> {
   void _updateTimer(timer) {
     debugPrint("Timer $timer");
     setState(() => _timer = timer);
+  }
+
+  Future<void> _addQueue() async {
+    try {
+      final int result = await platform.invokeMethod('addQueue', 'test');
+    }
+    catch (e) {
+      print('***** _openBrowser error: ' + e.toString());
+    }
   }
 
   @override
@@ -74,6 +84,10 @@ class _MyHomePageState extends State<MyHomePage> {
         FlatButton(
           child: const Text('Disable'),
           onPressed: _disableTimer,
+        ),
+        FlatButton(
+          child: const Text('queue'),
+          onPressed: _addQueue,
         ),
       ]),
     ]));
