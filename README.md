@@ -6,3 +6,4 @@ A simple project to demonstrate how to emit events from native code to then be c
 
 
 hotfix
+feature
